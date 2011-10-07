@@ -10,6 +10,12 @@ platforms :ruby do
   gem 'mysql2', '~> 0.3', :group => :production
 end
 
+platforms :jruby do
+  gem 'activerecord-jdbcsqlite3-adapter', :groups => [:development, :test]
+  gem 'activerecord-jdbcmysql-adapter', :group => :production
+  gem 'jruby-openssl'
+  gem 'trinidad', :group => :production
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
